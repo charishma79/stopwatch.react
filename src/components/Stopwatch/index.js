@@ -12,6 +12,11 @@ class StopWatch extends Component {
       isTimerRunning: false,
     }
   }
+  
+  componentWillUnmount(){
+    this.clearTimeInterval()
+  }
+
 
   clearTimerInterval = () => clearInterval(this.timerId)
 
